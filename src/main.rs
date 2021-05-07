@@ -2,6 +2,7 @@
 #![no_main]
 
 mod config;
+mod jobs;
 
 extern crate panic_halt;
 use sparkfun_pro_micro::prelude::*;
@@ -11,6 +12,14 @@ fn main() -> ! {
     let dp = sparkfun_pro_micro::Peripherals::take().unwrap();
 
     let mut pins = sparkfun_pro_micro::Pins::new(dp.PORTB, dp.PORTC, dp.PORTD, dp.PORTE, dp.PORTF);
+
+    // Open a serial connection
+    let mut serial = sparkfun_pro_micro::Serial::new(
+        dp.USART1,
+        pins.d0,
+        pins.d1.into_output(&mut pins.ddr),
+        57600.into_baudrate(),
+    );
 
     // Build the device config
     let config = config::create_config(
