@@ -5,10 +5,11 @@ authors = ["Evan Pratten <ewpratten@gmail.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 aprs-encode = "0.1.0"
 panic-halt = "0.2.0"
+embedded-hal = "0.2.5"
+void = { version = "1.0.2", default_features = false }
 
 [dependencies.sparkfun-pro-micro]
 git = "https://github.com/rahix/avr-hal"
