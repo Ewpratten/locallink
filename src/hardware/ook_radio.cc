@@ -16,7 +16,7 @@ void ook::init_rx(uint8_t pin, uint16_t baud)
     vw_rx_start();
 }
 
-void ook::send_data(char *data)
+void ook::send_data(const char *data)
 {
     vw_send((uint8_t *)data, strlen(data));
     vw_wait_tx();
