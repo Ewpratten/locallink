@@ -9,6 +9,7 @@ void jobs::try_repeat_packet()
 {
     // Build a buffer
     uint8_t buffer[SETTING_REPEATER_MESSAGE_BUFFER_SIZE];
+    memset(buffer, 0, sizeof(uint8_t) * SETTING_REPEATER_MESSAGE_BUFFER_SIZE);
 
     // Read a packet into the buffer
     int result = rx::get_incoming_data(buffer, SETTING_REPEATER_MESSAGE_BUFFER_SIZE);
@@ -60,7 +61,7 @@ void jobs::try_repeat_packet()
 
         // Reset the path
         counter -= 1;
-        old_path.setCharAt(old_path.length() - 1, (char)(counter));
+        old_path.setCharAt(old_path.length() - 1, (char)(counter) + '0');
         message->setPath(old_path);
 
         // Re-send the packet

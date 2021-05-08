@@ -41,12 +41,12 @@ void tx::send_raw_packet(const char *data)
 
     // Write to Serial
 #if SETTING_SERIAL_ENABLED
-    Serial.println(data);
+    Serial.println(data + '\0');
 #endif
 
 // Write to radio
 #if SETTING_TX_ENABLED
-    ook::send_data(data);
+    ook::send_data(data + '\0');
 #endif
 
     // Un-set the TX light
