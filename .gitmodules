@@ -1,3 +1,0 @@
-[submodule "lib/APRS-Decoder-Lib"]
-	path = lib/APRS-Decoder-Lib
-	url = https://github.com/lora-aprs/APRS-Decoder-Lib
