@@ -1,34 +1,19 @@
-#if !defined(__CONFIG_HH)
-#define __CONFIG_HH
+#if !defined(__CONFIG_HEADLESS_BEACON_HH)
+#define __CONFIG_HEADLESS_BEACON_HH
 
 #include <Arduino.h>
 
-/* -------- CONFIGURATION CONSTANTS -------- */
-#define CONF_CONST_RADIO_TYPE_NONE 0
-#define CONF_CONST_RADIO_TYPE_OOK 1
-#define CONF_CONST_RADIO_TYPE_LORA 2
-
 /* -------- CONFIGURATION -------- */
-
-// Callsign
-#define SETTING_DEVICE_CALLSIGN "VA3ZZA-1"
-
-// Message for all transmissions
-#define SETTING_PACKET_MESSAGE "Experimental OOK Transmitter"
-
-// Positioning
-#define SETTING_POSITIONING_ENABLED 1
-#define SETTING_POSITIONING_RAW_DDM "4259.59N/08114.43W"
 
 // Beaconing
 #define SETTING_BEACON_ENABLED 1
-#define SETTING_BEACON_INTERVAL_MS 15000
+#define SETTING_BEACON_INTERVAL_MS 5000
 
 // Radio transmitter settings
 #define SETTING_TX_ENABLED 1                      // Can transmit
 #define SETTING_TX_TYPE CONF_CONST_RADIO_TYPE_OOK // Radio type
 #define SETTING_TX_PIN 2                          // Data pin
-#define SETTING_TX_BAUD 200                       // Data baud
+#define SETTING_TX_BAUD 600                       // Data baud
 #define SETTING_TX_MAX_HOPS 2                     // Max number of repeaters allowed for all transmissions from this radio
 
 // Radio receiver settings
@@ -50,4 +35,4 @@
 #define SETTING_TEMP_SENSOR_ENABLED 1
 #define SETTING_TEMP_SENSOR_PIN A0
 
-#endif // __CONFIG_HH
+#endif // __CONFIG_HEADLESS_BEACON_HH

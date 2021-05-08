@@ -7,14 +7,26 @@ void tx::send_beacon_packet(float temperature_f)
 {
 
     // Build the packet string
-    String packet = String(SETTING_DEVICE_CALLSIGN ">APRS:!");
+    String packet = String(SETTING_DEVICE_CALLSIGN ">APRS");
+
+    // Path
+    packet.concat(",OOKSUB-");
+    packet.concat(SETTING_TX_MAX_HOPS);
+
+    // EOH
+    packet.concat(":!");
 
 #if SETTING_POSITIONING_ENABLED
-    packet.concat('t');
     packet.concat(SETTING_POSITIONING_RAW_DDM);
 #endif
 
+    // Temperature
+#if SETTING_TEMP_SENSOR_ENABLED
+    packet.concat('t');
     packet.concat(min(999, temperature_f));
+#endif
+
+    // Message
     packet.concat(SETTING_PACKET_MESSAGE);
 
     // Send the packet

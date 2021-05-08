@@ -10,9 +10,10 @@
             "includePath": [
                 "/home/ewpratten/projects/locallink/include",
                 "/home/ewpratten/projects/locallink/src",
+                "/home/ewpratten/projects/locallink/lib/APRS-Decoder-Lib/src",
+                "/home/ewpratten/projects/locallink/lib/VirtualWire",
                 "/home/ewpratten/.platformio/packages/framework-arduino-avr/cores/arduino",
                 "/home/ewpratten/.platformio/packages/framework-arduino-avr/variants/leonardo",
-                "/home/ewpratten/projects/locallink/lib/VirtualWire",
                 "/home/ewpratten/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
                 "/home/ewpratten/.platformio/packages/framework-arduino-avr/libraries/HID/src",
                 "/home/ewpratten/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
@@ -25,9 +26,10 @@
                 "path": [
                     "/home/ewpratten/projects/locallink/include",
                     "/home/ewpratten/projects/locallink/src",
+                    "/home/ewpratten/projects/locallink/lib/APRS-Decoder-Lib/src",
+                    "/home/ewpratten/projects/locallink/lib/VirtualWire",
                     "/home/ewpratten/.platformio/packages/framework-arduino-avr/cores/arduino",
                     "/home/ewpratten/.platformio/packages/framework-arduino-avr/variants/leonardo",
-                    "/home/ewpratten/projects/locallink/lib/VirtualWire",
                     "/home/ewpratten/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
                     "/home/ewpratten/.platformio/packages/framework-arduino-avr/libraries/HID/src",
                     "/home/ewpratten/.platformio/packages/framework-arduino-avr/libraries/SPI/src",

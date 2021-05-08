@@ -3,6 +3,7 @@
 #include <config.hh>
 #include <hardware/ook_radio.hh>
 #include <jobs/beacon.hh>
+#include <jobs/repeater.hh>
 
 void setup()
 {
@@ -35,7 +36,9 @@ void loop()
 {
 
     // Handle any incoming message
-    // TODO:
+#if SETTING_RX_ENABLED
+    jobs::try_repeat_packet();
+#endif
 
     // Handle beaconing if needed
 #if SETTING_BEACON_ENABLED

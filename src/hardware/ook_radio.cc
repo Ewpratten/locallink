@@ -21,3 +21,7 @@ void ook::send_data(const char *data)
     vw_send((uint8_t *)data, strlen(data));
     vw_wait_tx();
 }
+
+int ook::read_data(uint8_t* buffer, uint8_t length) {
+    return vw_get_message(buffer, &length);
+}

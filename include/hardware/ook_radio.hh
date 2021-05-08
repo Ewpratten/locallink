@@ -11,6 +11,8 @@ namespace ook
 
     void send_data(const char* data);
 
+    int read_data(uint8_t* buffer, uint8_t length);
+
 } // namespace ook
 
 #endif // __HARDWARE_OOK_RADIO_HH

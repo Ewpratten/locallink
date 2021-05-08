@@ -12,7 +12,7 @@ void jobs::send_beacon()
     long time_now = millis();
 
     // Only run if past the interval
-    if (time_now - last_beacon_time >= SETTING_BEACON_INTERVAL_MS)
+    if (time_now - last_beacon_time >= SETTING_BEACON_INTERVAL_MS || last_beacon_time == 0)
     {
 
         // Get the temperature
