@@ -10,7 +10,7 @@
             "includePath": [
                 "/home/ewpratten/projects/locallink/include",
                 "/home/ewpratten/projects/locallink/src",
-                "/home/ewpratten/projects/locallink/lib/APRSDecoder/src",
+                "/home/ewpratten/projects/locallink/lib/APRS-Decoder/src",
                 "/home/ewpratten/projects/locallink/lib/VirtualWire",
                 "/home/ewpratten/.platformio/packages/framework-arduino-avr/cores/arduino",
                 "/home/ewpratten/.platformio/packages/framework-arduino-avr/variants/leonardo",
@@ -26,7 +26,7 @@
                 "path": [
                     "/home/ewpratten/projects/locallink/include",
                     "/home/ewpratten/projects/locallink/src",
-                    "/home/ewpratten/projects/locallink/lib/APRSDecoder/src",
+                    "/home/ewpratten/projects/locallink/lib/APRS-Decoder/src",
                     "/home/ewpratten/projects/locallink/lib/VirtualWire",
                     "/home/ewpratten/.platformio/packages/framework-arduino-avr/cores/arduino",
                     "/home/ewpratten/.platformio/packages/framework-arduino-avr/variants/leonardo",
