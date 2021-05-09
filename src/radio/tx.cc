@@ -22,8 +22,21 @@ void tx::send_beacon_packet(float temperature_f)
 
     // Temperature
 #if SETTING_TEMP_SENSOR_ENABLED
+    packet.concat("_000/000");
     packet.concat('t');
-    packet.concat(min(999, temperature_f));
+    if (temperature_f < 100)
+    {
+        packet.concat('0');
+    }
+    if (temperature_f < 10)
+    {
+        packet.concat('0');
+    }
+    if (temperature_f < 0)
+    {
+        packet.concat('0');
+    }
+    packet.concat(min(999, (uint8_t)temperature_f));
 #endif
 
     // Message
